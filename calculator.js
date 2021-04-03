@@ -2,13 +2,15 @@
 
 const buttons = document.querySelectorAll('.button');
 const screen = document.querySelector('#screen');
+screen.textContent = '0';
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        if (e.target.className == 'button number'){
+        if ((e.target.className == 'button number') && (screen.textContent == '0')){
             screen.textContent = e.target.value;
+        }else if ((e.target.className == 'button number') && (screen.textContent != '0')){
+            screen.textContent += e.target.value;
         }
-        console.log(e.target.className);
     });
 });
 
