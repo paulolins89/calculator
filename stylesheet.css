@@ -1,3 +1,12 @@
+@font-face{
+    font-family: 'Digital-7';
+    src: url('/font_digital-7/digital-7.ttf');
+}
+
+h1, h2{
+    text-align: center;
+}
+
 .display-container{
     background-color: rgb(80, 79, 79);
     width: 425px;
@@ -10,13 +19,16 @@
 
 #screen{
     margin: 9px;
-    width: 375px;
-    height: 81px;
+    width: 365px;
+    height: 71px;
     border-radius: 5px;
     background-color: rgb(166, 194, 166);
     text-align: right;
-    font-family: "Digital-7 Mono", arial;
-    font-size: 75px;
+    font-family: "Digital-7", arial;
+    font-size: 85px;
+    color: black;
+    padding-bottom: 18px;
+    padding-right: 10px;
 }
 
 .button-container {
@@ -24,6 +36,7 @@
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 50px 100px 100px 100px 100px;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .button {
@@ -31,8 +44,7 @@
     font-size: 60px;
     color: white;
     background-color: gray;
-    border-radius: 5px;
-    
+    border-radius: 5px;  
 }
 
 #clear, #delete, #beep, #music{
@@ -45,4 +57,16 @@
 
 #equals{
     background-color: rgb(235, 72, 72);
+}
+
+.button:hover{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+#multiply:hover, #add:hover, #subtract:hover, #divide:hover{
+    background-color: rgba(82, 160, 185, 0.7);
+}
+
+#equals:hover{
+    background-color: rgba(235, 72, 72, 0.7);
 }
