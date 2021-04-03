@@ -1,5 +1,48 @@
-.container {
+.display-container{
+    background-color: rgb(80, 79, 79);
+    width: 425px;
+    height: 581px;
+    padding-left: 25px;
+    padding-top: 25px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#screen{
+    margin: 9px;
+    width: 375px;
+    height: 81px;
+    border-radius: 5px;
+    background-color: rgb(166, 194, 166);
+    text-align: right;
+    font-family: "Digital-7 Mono", arial;
+    font-size: 75px;
+}
+
+.button-container {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 50px 100px 100px 100px 100px;
+    margin: auto;
+}
+
+.button {
+    margin: 9px;
+    font-size: 60px;
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+    
+}
+
+#clear, #delete, #beep, #music{
+    font-size: 20px;
+}
+
+#multiply, #add, #subtract, #divide{
+    background-color: rgb(82, 160, 185);
+}
+
+#equals{
+    background-color: rgb(235, 72, 72);
 }
