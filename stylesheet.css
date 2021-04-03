@@ -19,16 +19,16 @@ h1, h2{
 
 #screen{
     margin: 9px;
-    width: 365px;
+    width: 360px;
     height: 71px;
     border-radius: 5px;
     background-color: rgb(166, 194, 166);
     text-align: right;
     font-family: "Digital-7", arial;
-    font-size: 85px;
-    color: black;
-    padding-bottom: 18px;
-    padding-right: 10px;
+    font-size: 84px;
+    caret-color: transparent;
+    
+    padding: 10px;
 }
 
 .button-container {
