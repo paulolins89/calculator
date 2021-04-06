@@ -47,9 +47,7 @@ buttons.forEach((button) => {
         //returns everything back to 0 
         }else if (e.target.id == 'clear'){
             screen.textContent = '0';
-            firstNumber = undefined;
-            secondNumber = undefined;
-            currentOperator = undefined;
+            firstNumber = secondNumber = currentOperator = undefined;
             newNumbersOnScreen = true;
         //deletes the last things added to the screen
         }else if (e.target.id == 'delete'){
@@ -78,17 +76,17 @@ buttons.forEach((button) => {
                 if (e.target.id != 'equals') {
                     currentOperator = e.target.id;
                 }
+                
                 newNumbersOnScreen = true;   
             }
         }
-        
-        //TODO - add activator for operator
-
         //if there is nothing on the screen, it puts 0 back
         if (screen.textContent == ''){
             screen.textContent = '0';
         } else if (screen.textContent == 'Infinity'){
             screen.textContent = 'ERROR'
+            firstNumber = secondNumber = currentOperator = undefined;
+            newNumbersOnScreen = true;
         }
     });
 });
