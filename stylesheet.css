@@ -47,11 +47,11 @@ h1, h2{
     border-radius: 5px;  
 }
 
-#clear, #delete, #percent, #negative{
+#clear, #delete, #elevate, #negative{
     font-size: 20px;
 }
 
-#multiply, #add, #subtract, #divide{
+#multiply, #add, #subtract, #divide, #elevate{
     background-color: rgb(82, 160, 185);
 }
 
