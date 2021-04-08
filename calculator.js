@@ -16,6 +16,7 @@ operate = (a, b, operator) => {
 }
 
 const buttons = document.querySelectorAll('.button');
+const operatorButtons = document.querySelectorAll('.operator')
 const screen = document.querySelector('#screen');
 
 let firstNumber;
@@ -31,6 +32,7 @@ buttons.forEach((button) => {
         if ((e.target.className == 'button number') && (newNumbersOnScreen == true) && (e.target.id != 'point')){
             screen.textContent = e.target.value;
             newNumbersOnScreen = false;
+            operatorButtons.forEach((button) => button.disabled = false);
         //if the number on the screen is not 0, it appends the number to the end of the sequenece (there can only be 9 numbers max on screen)
         }else if ((e.target.className == 'button number') && (newNumbersOnScreen == false) && (screen.textContent.length < 8)){
             screen.textContent += e.target.value;
@@ -61,29 +63,38 @@ buttons.forEach((button) => {
             }
         //TODO - add function for percentage button
         }else if (e.target.id == 'percent'){
-            
+        
+        
         }else if (e.target.className == 'button operator'){
             if (e.target.id != currentOperator){
-                if ((firstNumber == undefined) && (secondNumber == undefined)){
+                if (firstNumber == undefined){
                     firstNumber = parseFloat(screen.textContent);
-                }else if((firstNumber != undefined) && (secondNumber == undefined)){
+                }else if(firstNumber != undefined){  
                     secondNumber = parseFloat(screen.textContent);
                     screen.textContent = operate(firstNumber, secondNumber, currentOperator);
-                    console.log(firstNumber, secondNumber, currentOperator);                
-                    firstNumber = parseFloat(screen.textContent);
+                    firstNumber = operate(firstNumber, secondNumber, currentOperator);                
                     secondNumber = undefined;
                 }
-                if (e.target.id != 'equals') {
-                    currentOperator = e.target.id;
-                }
                 
-                newNumbersOnScreen = true;   
+                if (e.target.id != 'equals'){
+                    currentOperator = e.target.id;
+                    operatorButtons.forEach((button) => button.disabled = true);
+                }else{
+                    currentOperator = e.target.id;
+                    firstNumber = undefined; 
+                    }
+                newNumbersOnScreen = true; 
+                  
             }
         }
+        
+            
+        
         //if there is nothing on the screen, it puts 0 back
         if (screen.textContent == ''){
             screen.textContent = '0';
-        } else if (screen.textContent == 'Infinity'){
+        //if there is a division by 0, it displays an error and restores everything to default values
+        } else if (screen.textContent == 'Infinity' || screen.textContent == 'NaN'){
             screen.textContent = 'ERROR'
             firstNumber = secondNumber = currentOperator = undefined;
             newNumbersOnScreen = true;
