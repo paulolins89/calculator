@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="stylesheet.css">
-    </head>
-    <body>
-        <div>
-            <h1>Hey! It's a calculator!</h1> 
-            <h2>Calculate some stuff, or whatever.</h2>
-        </div>
-        <div class = display-container>
-            <p id="screen"></p>
-            <div class = button-container>
-                <input type="button" class = "button" id = "clear" value="C">
-                <input type="button" class = "button" id = "delete" value="DEL" >
-                <input type="button" class = "button" id = "negative" value="-/+">
-                <input type="button" class = "button operator" id = "elevate" value='^'>
-                <input type="button" class = "button number" id = "seven" value="7">
-                <input type="button" class = "button number" id = "eight" value="8">
-                <input type="button" class = "button number" id = "nine" value="9">
-                <input type="button" class = "button operator" id = "divide" value="/">
-                <input type="button" class = "button number" id = "four" value="4">
-                <input type="button" class = "button number" id = "five" value="5">
-                <input type="button" class = "button number" id = "six" value="6">
-                <input type="button" class = "button operator" id = "multiply" value="X">
-                <input type="button" class = "button number" id = "one" value="1">
-                <input type="button" class = "button number" id = "two" value="2">
-                <input type="button" class = "button number" id = "three" value="3">
-                <input type="button" class = "button operator" id = "subtract" value="-">            
-                <input type="button" class = "button" id = "point" value=".">
-                <input type="button" class = "button number" id = "zero" value="0">
-                <input type="button" class = "button operator" id = "equals" value="=">
-                <input type="button" class = "button operator" id = "add" value="+">
-            </div>
-        </div>  
-        <!--1. make the calculator on html and css-->
-        <script src='calculator.js'></script>
-    </body>
+   <head>
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="stylesheet.css">
+   </head>
+   <body>
+       <div>
+           <h1>Hey! It's a calculator!</h1>
+       </div>
+       <div class = display-container>
+           <p id="screen"></p>
+           <div class = button-container>
+               <input type="button" class = "button" id = "Escape" value="C">
+               <input type="button" class = "button" id = "Backspace" value="DEL" >
+               <input type="button" class = "button" id = "n" value="-/+">
+               <input type="button" class = "button operator" id = "^" value='^'>
+               <input type="button" class = "button number" id = "7" value="7">
+               <input type="button" class = "button number" id = "8" value="8">
+               <input type="button" class = "button number" id = "9" value="9">
+               <input type="button" class = "button operator" id = "/" value="/">
+               <input type="button" class = "button number" id = "4" value="4">
+               <input type="button" class = "button number" id = "5" value="5">
+               <input type="button" class = "button number" id = "6" value="6">
+               <input type="button" class = "button operator" id = "*" value="X">
+               <input type="button" class = "button number" id = "1" value="1">
+               <input type="button" class = "button number" id = "2" value="2">
+               <input type="button" class = "button number" id = "3" value="3">
+               <input type="button" class = "button operator" id = "-" value="-">           
+               <input type="button" class = "button" id = "." value=".">
+               <input type="button" class = "button number" id = "0" value="0">
+               <input type="button" class = "button operator" id = "Enter" value="=">
+               <input type="button" class = "button operator" id = "+" value="+">
+           </div>
+       </div> 
+       <script src='calculator.js'></script>
+   </body>
 </html>

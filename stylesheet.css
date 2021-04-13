@@ -1,23 +1,36 @@
 @font-face{
     font-family: 'Digital-7';
     src: url('/font_digital-7/digital-7.ttf');
-}
-
-h1, h2{
+ }
+  
+ body {
+  background-image: linear-gradient(to bottom right, pink, rgb(245, 92, 92)); 
+ }
+  
+ h1, h2{
     text-align: center;
-}
-
-.display-container{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color:black;
+    text-shadow: 2px 2px rgb(136, 136, 136);
+    padding-top: 20px;
+    padding-bottom: 20px;
+ }
+  
+ .display-container{
     background-color: rgb(80, 79, 79);
     width: 425px;
     height: 581px;
-    padding-left: 25px;
+    padding-left: 27px;
     padding-top: 25px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 78px;
     border-radius: 25px;
-}
-
-#screen{
+    box-shadow: 4px 4px black
+ }
+  
+ #screen{
     margin: 9px;
     width: 360px;
     height: 71px;
@@ -27,46 +40,52 @@ h1, h2{
     font-family: "Digital-7", arial;
     font-size: 84px;
     caret-color: transparent;
-    
+    box-shadow: -2px -2px rgba(166, 194, 166, 0.363);
     padding: 10px;
-}
-
-.button-container {
+ }
+  
+ .button-container {
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 50px 100px 100px 100px 100px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
-}
-
-.button {
+ }
+  
+ .button {
     margin: 9px;
     font-size: 60px;
     color: white;
     background-color: gray;
-    border-radius: 5px;  
-}
-
-#clear, #delete, #elevate, #negative{
+    border-radius: 5px;
+    box-shadow: 3px 3px black 
+ }
+  
+ .button:active{
+    box-shadow: none;
+ }
+  
+ #Escape, #Backspace, #\^, #n{
     font-size: 20px;
-}
-
-#multiply, #add, #subtract, #divide, #elevate{
+ }
+  
+ #\*, #\+, #\-, #\/, #\^{
     background-color: rgb(82, 160, 185);
-}
-
-#equals{
+ }
+  
+ #Enter{
     background-color: rgb(235, 72, 72);
-}
-
-.button:hover{
+ }
+  
+ .button:hover{
     background-color: rgba(128, 128, 128, 0.7);
-}
-
-#multiply:hover, #add:hover, #subtract:hover, #divide:hover{
+ }
+  
+ #\*:hover, #\+:hover, #\-:hover, #\/:hover, #\^:hover{
     background-color: rgba(82, 160, 185, 0.7);
-}
-
-#equals:hover{
+ }
+  
+ #Enter:hover{
     background-color: rgba(235, 72, 72, 0.7);
-}
+ }
+ 
